@@ -22,11 +22,13 @@ Thanks TMDB guys:
 
 ## Next improvements:
 
-### 1.Persist list of favorites and My list:
+### 1. Increase test coverage
+
+### 2.Persist list of favorites and My list:
 
 Right now favorites and my list is not saved, they lost when reload page. The next improvement will be use [redux-persist](https://redux-toolkit.js.org/usage/usage-guide#use-with-redux-persist) for store in browser localstorage
 
-### 2.Load more than one page of searched movies:
+### 3.Load more than one page of searched movies:
 
 Now it's only loaded first page of movies, the idea is to implement load next page at end of scroll list
 
