@@ -1,10 +1,30 @@
+# React Movies
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
+The list of complete project dependencies can be found on file `package.json`, the main libraries used for this project are:
+
+- react 17.x
+- redux-toolkit
+- RTK Query
+- typescript
+- react-router 6.x
+- semantic-ui-react
+- styled-components
+- jest
+- react-testing-library (@testing-library/react)
+
+It is used the [TMDB API](https://www.themoviedb.org/documentation/api). Because of this you need an api key for running the app on file `/src/api/movies.ts`. [How do I apply for an API key?](https://www.themoviedb.org/documentation/api)
+
+Thanks TMDB guys:
+
+<img src="./tmdb.svg" alt="TMDB" width="250" style="margin: 30px"/>
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start` or `yarn start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm test` or `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
