@@ -9,8 +9,8 @@ import { ROUTES } from "../../routes";
 
 export function Header() {
   const dispatch = useAppDispatch();
-  const [value, setValue] = useState("");
-  const [searchValue, setSearchValue] = useState("");
+  const [value, setValue] = useState<string>("");
+  const [searchValue, setSearchValue] = useState<string>("");
   const navigate = useNavigate();
 
   const { data: config } = useFetchConfigQuery();
