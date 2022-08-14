@@ -60,6 +60,7 @@ export function Header() {
             "data-testid": "search-icon",
           }}
         />
+        <div data-netlify-identity-menu></div>
       </BarGroup>
     </HeaderBar>
   );
