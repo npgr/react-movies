@@ -1,0 +1,2 @@
+// Rest client VSCode extension
+get http://localhost:8888/.netlify/functions/movies
