@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -21,25 +21,25 @@ export interface Config {
 }
 
 export const apiSlice = createApi({
-  reducerPath: "moviesApi",
+  reducerPath: 'moviesApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://api.themoviedb.org/3",
+    baseUrl: '',
   }),
   endpoints(builder) {
     return {
       fetchPopularMovies: builder.query<MovieData, number | void>({
         query(page = 1) {
-          return `/movie/popular?api_key=${API_KEY}&page=${page}`;
+          return `.netlify/functions/get-popular-movies?page=${page}`;
         },
       }),
       fetchConfig: builder.query<Config, void>({
         query() {
-          return `/configuration?api_key=${API_KEY}`;
+          return '.netlify/functions/get-configuration';
         },
       }),
       searchMovie: builder.query<MovieData, { query: string; page?: number }>({
         query({ query, page = 1 }) {
-          return `/search/movie?api_key=${API_KEY}&query=${query}&page=${page}`;
+          return `.netlify/functions/search-movies?query=${query}&page=${page}`;
         },
       }),
     };
@@ -47,7 +47,7 @@ export const apiSlice = createApi({
 });
 
 export const {
-  useFetchPopularMoviesQuery,
+  // useFetchPopularMoviesQuery,
   useFetchConfigQuery,
   useSearchMovieQuery,
 } = apiSlice;

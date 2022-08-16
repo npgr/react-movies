@@ -1,0 +1,9 @@
+// Rest client VSCode extension
+### get popular movies
+get http://localhost:8888/.netlify/functions/get-popular-movies
+
+### get configuration
+get http://localhost:8888/.netlify/functions/get-configuration
+
+### Search Movies
+get http://localhost:8888/.netlify/functions/search-movies?query=thor
