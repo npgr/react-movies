@@ -1,0 +1,28 @@
+name: 🚀 Test & Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  unit_tests:
+    name: ⚡ Test Movies
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 📦 Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: 📥 Install dependencies
+        run: yarn
+
+      - name: 🐙 Run tests
+        run: yarn test:ci
